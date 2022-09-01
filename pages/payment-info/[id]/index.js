@@ -11,14 +11,14 @@ export default function PaymentInfo(props){
       <Card 
         hasButton={false} 
         icon={'/img/icons/camping.png'} 
-        buttonText="Pagar" 
+        buttonText={'Pagar'} 
         title={'[Jovens] - Acampaget'} 
         linkTo={'/payment-info/1'}
         />
       <Card 
         hasButton={false} 
         icon={'/img/icons/money.png'} 
-        buttonText="Pagar" 
+        buttonText={'Pagar'} 
         title={'Tesoureiro: João Ferreira\n(15) 98829-9752'} 
         linkTo={'/payment-info/1'}
         additonalInformation={

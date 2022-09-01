@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import styles from '../../../styles/Home.module.css'
 
 export default function CardInfo({hasImg = true, title, text, img,footer}){
@@ -13,7 +14,7 @@ export default function CardInfo({hasImg = true, title, text, img,footer}){
        ))}
       </div>
       {hasImg && <div className={styles.cardInfoBodyImg}>
-        <img src={img} width='96' height='96'/>
+        <Image src={img} width='96' height='96'/>
       </div>}
     </div>
     <div className={styles.cardInfoFooter}>

@@ -14,9 +14,9 @@ export default function Card({title, buttonText, linkTo, icon, hasButton, addito
        ))}
     </div>
     {additonalInformation}
-    {hasButton !== false && linkTo.length > 0 && <div className={styles.cardButton}>
-      {linkTo.length > 0 && <Link href={linkTo}>{buttonText}</Link>}
-      {linkTo.length === 0 && {buttonText}}
+    {hasButton !== false && !!linkTo?.length && <div className={styles.cardButton}>
+      {!!linkTo?.length && <Link href={linkTo}>{buttonText}</Link>}
+      {!!linkTo?.length && {buttonText}}
     </div>}
   </div>
   )

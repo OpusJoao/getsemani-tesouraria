@@ -9,7 +9,7 @@ function PaymentInfo({currentPaymentInfo}){
     <div>
       <Card 
         hasButton={false} 
-        icon={'/img/icons/camping.png'} 
+        icon={currentPaymentInfo?.iconTitle} 
         buttonText={'Pagar'} 
         title={currentPaymentInfo?.title}
         />

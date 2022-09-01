@@ -16,7 +16,7 @@ export default function Card({title, buttonText, linkTo, icon, hasButton, addito
     {additonalInformation}
     {hasButton !== false && !!linkTo?.length && <div className={styles.cardButton}>
       {!!linkTo?.length && <Link href={linkTo}>{buttonText}</Link>}
-      {!!linkTo?.length && {buttonText}}
+      {!linkTo?.length ? buttonText : ''}
     </div>}
   </div>
   )

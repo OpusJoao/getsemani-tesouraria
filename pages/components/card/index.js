@@ -6,7 +6,7 @@ export default function Card({title, buttonText, linkTo, icon, hasButton, addito
   return(
   <div className={styles.card}>
     <div className={styles.cardIcon}>
-      <Image src={icon} width='24' height='24'/>
+      <Image src={icon} width='24' height='24' alt='icon'/>
     </div>
     <div className={styles.cardTitle}>
        {title?.length > 0 && title.split(/\n/).map((val, index)=>(

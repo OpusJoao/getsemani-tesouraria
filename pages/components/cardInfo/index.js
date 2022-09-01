@@ -14,7 +14,7 @@ export default function CardInfo({hasImg = true, title, text, img,footer}){
        ))}
       </div>
       {hasImg && <div className={styles.cardInfoBodyImg}>
-        <Image src={img} width='96' height='96'/>
+        <Image src={img} width='96' height='96' alt='imageCard'/>
       </div>}
     </div>
     <div className={styles.cardInfoFooter}>

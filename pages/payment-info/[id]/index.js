@@ -1,8 +1,7 @@
-import { useRouter } from 'next/router';
-import { useEffect, useState } from 'react';
 import Button from '../../components/button';
 import Card from '../../components/card';
 import CardInfo from '../../components/cardInfo';
+import axios from 'axios'
 
 function PaymentInfo({currentPaymentInfo}){
   return(
@@ -53,18 +52,19 @@ function PaymentInfo({currentPaymentInfo}){
   )
 }
 
-export function getServerSideProps(ctx) {
+export async function getServerSideProps(ctx) {
   const { params } = ctx;
   const { id } = params;
-  const AllpaymentsInfo = process.env.PAYMENTS_INFO ? JSON.parse(process.env.PAYMENTS_INFO) : null
-  const currentPaymentInfo =  AllpaymentsInfo?.filter(val => val.id == id)[0] || null
+  const requestPayments = await axios.get(`${process.env.URL_BACKEND}/paymentsInfo/${id}`).then(response => {
+    return response
+  })
   return {
     props: {
       key: id,
-      id,
-      currentPaymentInfo
-    }, 
-  };
+      id: requestPayments.data.payment._id,
+      currentPaymentInfo : requestPayments.data.payment
+    },
+  }
 }
 
 

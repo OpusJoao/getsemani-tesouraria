@@ -10,7 +10,7 @@ function Home({payments}) {
           icon={payment.img} 
           buttonText={'Pagar'} 
           title={payment.title} 
-          linkTo={`/payment-info/${payment.id}`}/>
+          linkTo={`/payment-info/${payment._id}`}/>
           )
       })}
       <span style={{color: '#9F9F9F', marginTop: '3rem'}}>Estes são os únicos pagamentos</span>

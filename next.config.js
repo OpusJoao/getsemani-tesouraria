@@ -3,7 +3,7 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   images: {
-    domains: ['cdn-icons-png.flaticon.com'],
+    domains: ['cdn-icons-png.flaticon.com', 'cdn.onlinewebfonts.com'],
   },
 }
 
